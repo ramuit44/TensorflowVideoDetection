@@ -78,7 +78,7 @@ class Upload extends Component {
       const formData = new FormData();
       formData.append("file", file, file.name);
 
-      req.open("POST", "http://ec2-13-239-31-173.ap-southeast-2.compute.amazonaws.com:8000/upload");
+      req.open("POST", "http://ec2-54-206-113-5.ap-southeast-2.compute.amazonaws.com:8000/upload");
       req.send(formData);
     });
   }
@@ -155,7 +155,7 @@ class Upload extends Component {
         </div>
         <div className="Actions">{this.renderActions()}</div>
        
-        {this.props.buttonLabel ==="Done" && <a href="http://ec2-13-239-31-173.ap-southeast-2.compute.amazonaws.com:8000/static/output_detected_1.avi" target="_blank">Download Processed Video</a>}
+        {this.props.buttonLabel ==="Done" && <a href="http://ec2-54-206-113-5.ap-southeast-2.compute.amazonaws.com:8000/static/output_detected_1.avi" target="_blank">Download Processed Video</a>}
         </div>
     );
   }

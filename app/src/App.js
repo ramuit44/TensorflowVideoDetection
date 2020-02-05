@@ -8,7 +8,7 @@ var socket;
 class App extends Component {
   constructor() {
     super();
-    socket =  socketIOClient('http://ec2-13-239-31-173.ap-southeast-2.compute.amazonaws.com:3001');
+    socket =  socketIOClient('http://ec2-54-206-113-5.ap-southeast-2.compute.amazonaws.com:3001');
     this.state = {
       socket,
       buttonLabel:"Upload",

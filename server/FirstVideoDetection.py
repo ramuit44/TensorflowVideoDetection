@@ -41,7 +41,7 @@ detector.setModelPath(os.path.join(execution_path, "yolo.h5"))
 detector.loadModel(detection_speed="flash")
 
 video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "input.mp4"),
-                                             output_file_path=os.path.join(execution_path, "upload/output_detected_1"), frames_per_second=5,
+                                             output_file_path=os.path.join(execution_path, "upload/output_detected_1"), frames_per_second=29,
                                              
                                              per_frame_function=forFrame,
                                              per_second_function=forSeconds,

@@ -8,7 +8,7 @@ io.sockets.on("connection", function(socket) {
     console.log(data);
 
     const { spawn } = require("child_process");
-    const pyprog = spawn("python3", ["./FirstVideoDetection.py"]);
+    const pyprog = spawn("python", ["./FirstVideoDetection.py"]);
     str = "";
 
     pyprog.stdout.on("data", function(data) {

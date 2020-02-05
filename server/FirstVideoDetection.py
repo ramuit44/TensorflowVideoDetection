@@ -38,17 +38,17 @@ def forFull(output_arrays, count_arrays, average_output_count):
 detector = VideoObjectDetection()
 detector.setModelTypeAsYOLOv3()
 detector.setModelPath(os.path.join(execution_path, "yolo.h5"))
-detector.loadModel()
+detector.loadModel(detection_speed="flash")
 
 video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "input.mp4"),
-                                             output_file_path=os.path.join(execution_path, "upload/output_detected_1"), frames_per_second=29,
+                                             output_file_path=os.path.join(execution_path, "upload/output_detected_1"), frames_per_second=5,
                                              
                                              per_frame_function=forFrame,
                                              per_second_function=forSeconds,
                                              per_minute_function=forMinute,
                                              video_complete_function=forFull,
                                             
-                                             minimum_percentage_probability=30,
+                                             minimum_percentage_probability=10,
 
                                              log_progress=True)
 print(video_path)
